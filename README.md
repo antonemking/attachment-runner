@@ -4,7 +4,7 @@ Attachment Runner allows you to migrate records and attachments from an existing
 It also can be used to move attachments stored locally and move them to existing records in ServiceNow.
 
 *italic* Note: this was built over a weekend to fulfill an immediate need for a client. Test thoroughly with demo instances
-before using in a production env.
+before using in a production env. *italic*
 
 ## Prerequisites
 

@@ -3,6 +3,9 @@
 Attachment Runner allows you to migrate records and attachments from an existing ServiceNow instance to a new one.
 It also can be used to move attachments stored locally and move them to existing records in ServiceNow.
 
+*italic* Note: this was built over a weekend to fulfill an immediate need for a client. Test thoroughly with demo instances
+before using in a production env.
+
 ## Prerequisites
 
 Attachment Runner requires python3 to be installed and the following imports:
@@ -16,6 +19,10 @@ Attachment Runner requires python3 to be installed and the following imports:
 os, json, io and mimetpyes should come with python3
 
 ## Setup
+
+Configure the folder strucutre as the application will create log files and move files around automatically.
+
+> coming soon...
 
 Update `config.py` for your usecase
 ```python
@@ -145,7 +152,7 @@ Change to the attachment_runner directory and run in your terminal.
 ```sh
 python runner.py
 ```
-![runner](https://github.com/enotgnik/attachment-runner/screenshots/runner.png)
+![runner](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/runner.png)
 
 An output file should now exist containing all the records from the chosen table in excel. This file can be used to imported via a datasource into the new instance (transform where necessary)
 
@@ -156,7 +163,7 @@ In the same directory run the following in your terminal.
 ```sh
 python zipPull.py
 ```
-![pull](https://github.com/enotgnik/attachment-runner/screenshots/zipPull.png)
+![pull](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/zipPull.png)
 
 A download file should now exist containing a log of all the attachments that were downloaded and the attachment directory should now contain sub directories named after the record with the attachment files within.
 
@@ -168,7 +175,7 @@ In the same directory run the following in your terminal.
 ```sh
 python zipPush.py
 ```
-![push](https://github.com/enotgnik/attachment-runner/screenshots/zipPush.png)
+![push](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/zipPush.png)
 
 Monitor the output and after receiving your summary a upload log should now exist showing what attachments failed and those that were a success.
 

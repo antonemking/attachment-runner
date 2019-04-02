@@ -1,0 +1,11 @@
+python3
+requests
+os
+zipfile
+io
+json
+pandas
+pprint
+opnepyxl
+mimetypes
+texttable

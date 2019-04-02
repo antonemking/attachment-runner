@@ -101,6 +101,7 @@ function addBytesToZip (out, dir, file, stream){
 
 ```javascript
 /*
+** Credit: ServiceNow Guru https://www.servicenowguru.com/scripting/download-attachments-zip-file/
 ** Antone M King
 ** API Definition: Attachment Runner
 ** Relative Path: /table/{table}/correlationfield/{correfield}/correlationID/{correlationid}
@@ -144,7 +145,7 @@ Change to the attachment_runner directory and run in your terminal.
 ```sh
 python runner.py
 ```
-![runner](https://github.com/antoneking/core/blob/master/utilities/attachment-runner/screenshots/runner.png)
+![runner](https://github.com/enotgnik/attachment-runner/screenshots/runner.png)
 
 An output file should now exist containing all the records from the chosen table in excel. This file can be used to imported via a datasource into the new instance (transform where necessary)
 
@@ -155,7 +156,7 @@ In the same directory run the following in your terminal.
 ```sh
 python zipPull.py
 ```
-![pull](https://github.com/antoneking/core/blob/master/utilities/attachment-runner/screenshots/zipPull.png)
+![pull](https://github.com/enotgnik/attachment-runner/screenshots/zipPull.png)
 
 A download file should now exist containing a log of all the attachments that were downloaded and the attachment directory should now contain sub directories named after the record with the attachment files within.
 
@@ -167,9 +168,13 @@ In the same directory run the following in your terminal.
 ```sh
 python zipPush.py
 ```
-![push](https://github.com/antoneking/core/blob/master/utilities/attachment-runner/screenshots/zipPush.png)
+![push](https://github.com/enotgnik/attachment-runner/screenshots/zipPush.png)
 
 Monitor the output and after receiving your summary a upload log should now exist showing what attachments failed and those that were a success.
+
+## TODO:
+1. improve runner to support streaming records over 10,000
+2. improve file logging
 
 ## Author
 

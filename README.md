@@ -20,9 +20,9 @@ os, json, io and mimetpyes should come with python3
 
 ## Setup
 
-Configure the folder strucutre as the application will create log files and move files around automatically.
+Configure the folder strucutre like the below (do not create the excel files) and the application will move files and generate log files automatically.
 
-> coming soon...
+![runner](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/file-struc.png)
 
 Update `config.py` for your usecase
 ```python
@@ -154,7 +154,9 @@ python runner.py
 ```
 ![runner](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/runner.png)
 
-An output file should now exist containing all the records from the chosen table in excel. This file can be used to imported via a datasource into the new instance (transform where necessary)
+An output file should now exist containing all the records from the chosen table in excel. This file can be used to imported via a datasource into the new instance (transform where necessary).
+
+*See code comment on if you are trying to poll more than 1000 records (will work on offset for large GET Requests when I get some time). You will need to generate a JSON file with the record data (use firefox and you can right click the output and copy paste to a file) https://<instance name>.service-now.com/mytable.do?JSONv2*
 
 #### 2. Execute the attachment pull
 
@@ -180,7 +182,7 @@ python zipPush.py
 Monitor the output and after receiving your summary a upload log should now exist showing what attachments failed and those that were a success.
 
 ## TODO:
-1. improve runner to support streaming records over 10,000
+1. improve runner api to support offset to handle large amounts of records
 2. improve file logging
 
 ## Author

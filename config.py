@@ -1,4 +1,4 @@
-# Update the config for your instance and table you want to query
+# Update the config for your instance and table you want to query.
 
 username='user'
 password='pass' 

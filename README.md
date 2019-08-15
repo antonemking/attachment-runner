@@ -20,7 +20,7 @@ os, json, io and mimetpyes should come with python3
 
 ## Setup
 
-Configure the folder strucutre like the below (do not create the excel files) and the application will move files and generate log files automatically.
+Configure the folder structure like the below (do not create the excel files) and the application will move files and generate log files automatically.
 
 ![runner](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/file-struc.png)
 
@@ -45,11 +45,11 @@ Update `config.py` for your usecase
 
 ### Create Processor
 
-> In ServiceNow create a processor called DownloadAttachment with a path "DownloadAttachment" and add the follow code.
+> In the target ServiceNow instance create a processor called DownloadAttachment with a path "DownloadAttachment" and add the follow code.
 
 ```javascript
 /*
-**
+** Credit: ServiceNow Guru https://www.servicenowguru.com/scripting/download-attachments-zip-file/
 ** Antone M King
 ** Add the processor to the target instance
 ** Name the processor and its path 'DownloadAttachment'
@@ -108,7 +108,7 @@ function addBytesToZip (out, dir, file, stream){
 
 ```javascript
 /*
-** Credit: ServiceNow Guru https://www.servicenowguru.com/scripting/download-attachments-zip-file/
+** 
 ** Antone M King
 ** API Definition: Attachment Runner
 ** Relative Path: /table/{table}/correlationfield/{correfield}/correlationID/{correlationid}

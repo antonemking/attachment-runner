@@ -24,7 +24,7 @@ Configure the folder structure like the below (do not create the excel files) an
 
 ![runner](https://github.com/Enotgnik/attachment-runner/blob/master/screenshots/file-struc.png)
 
-Update `config.py` for your usecase
+Update `config.py` for your usecase. You will need to auth with both your source and target. Before you Push to your target update the username and password.
 ```python
     username='user'
     password='pass' 
@@ -184,6 +184,8 @@ Monitor the output and after receiving your summary a upload log should now exis
 ## TODO:
 1. improve runner api to support offset to handle large amounts of records
 2. improve file logging
+3. improve documentation
+4. refactor repeated code into classes
 
 ## Author
 
